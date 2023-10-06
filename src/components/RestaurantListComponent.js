@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import CategorySelectorComponent from './CategorySelectorComponent';
-import RestaurantDetailComponent from './RestaurantDetailcomponent';
+import RestaurantDetailComponent from './RestaurantDetailComponent';
 import { getAllRestaurnts } from '../api/restaurant';
 import { connect } from 'react-redux';
 import "../styles/restaurantList.css";
