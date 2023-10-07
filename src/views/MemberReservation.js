@@ -136,17 +136,17 @@ const MemberReservation = ({dispatch, restaurantinfo, userinfo}) => {
             <div className="select-reservation-date">
                 <div className="select-reservation-date-element">
                     <InputTitleComponent name="Choose a date" />
-                    <SelectNumberComponent value={date} step="1" maxnumber="31" onClickEvent={handleChoosedate}/>
+                    <SelectNumberComponent type="date" value={date} step="1" maxnumber="31" onClickEvent={handleChoosedate}/>
                 </div>
                 <div className="select-reservation-month-element">
                     <InputTitleComponent name="Choose a month" />
-                    <SelectNumberComponent value={month} step="1" maxnumber="12" onClickEvent={handleChoosemonth}/>
+                    <SelectNumberComponent type="month" value={month} step="1" maxnumber="12" onClickEvent={handleChoosemonth}/>
                 </div>
             </div>
             <div className="reservation-now-actions"></div>
             <div className="select-seat-element">
                 <InputTitleComponent name="Choose a seat" />
-                <SelectNumberComponent value={seats} step="2" maxnumber={restaurantinfo.restaurant.seats} onClickEvent={handleChooseseat}/>
+                <SelectNumberComponent type="seat" value={seats} step="2" maxnumber={restaurantinfo.restaurant.seats} onClickEvent={handleChooseseat}/>
             </div>
 
             <ButtonComponent id="resbtn" name="RESERVE NOW" onClickEvent={handleReserveNow} />

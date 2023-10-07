@@ -5,10 +5,21 @@ import "../styles/selectNumber.css";
 const SelectNumberComponent = ({ value, maxnumber, step, onClickEvent }) => {
 
     const [localValue, setLocalValue] = useState(Number(value));
-
+    const today = new Date();
+    const currentMonth = today.getMonth() + 1;
+    const currentDate = today.getDate();
     const decreaseValue = () => {
         let currentVal = Number(localValue);
         currentVal -= Number(step);
+        if (type == 'date') {
+            if (currentVal < currentDate) {
+                return;
+            }
+        } else if (type =='month') {
+            if (currentVal < currentMonth) {
+                return;
+            }
+        }
         setLocalValue(currentVal);
         onClickEvent(currentVal);
     }
